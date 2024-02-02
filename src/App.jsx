@@ -1,12 +1,10 @@
 import { useState } from 'react'
 
-import './App.css'
-
 function App() {
     const [noCount, setNoCount] = useState(0)
     const [yesCount, setYesCount] = useState(0)
     const [yesPressed, setYesPressed] = useState(false)
-    const [hr, setHR] = useState(false)
+
     const yesButtonSize = noCount *10  + 15
     const noButtonSize = yesCount *10  + 15
 
@@ -19,7 +17,7 @@ function App() {
     }
 
     const getNoButtonText = () => {
-      if(hr) setHR(false)
+
       const phrases= [
         "No",
         "No ?????",
@@ -37,14 +35,14 @@ function App() {
         "Ik vari haan karde mutiyare"
       ]
 
-      if(noCount==11 || noCount==12) setHR(true)
+   
       if(noCount==phrases.length) setNoCount(0);
 
       return phrases[Math.min(noCount, phrases.length -1)]
     }
 
     const getYesButtonText = () => {
-      if(hr) setHR(false)
+ 
       const phrases= [
         "Yes",
         "Are you sure about that ?",
@@ -55,7 +53,7 @@ function App() {
         "Please click for confirmation",
         "thanks !!!"
       ]
-      if(yesCount==3) setHR(true)
+
       if(yesCount==phrases.length -1) setYesPressed(true)
       return phrases[Math.min(yesCount, phrases.length -1)]
     }
