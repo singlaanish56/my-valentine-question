@@ -60,16 +60,16 @@ function App() {
 
   return (
     <>
-      <div className='flex flex-col mx-auto items-center h-screen justify-center'>
+      <div className='flex flex-col mx-auto items-center h-screen justify-center max-w-sm sm:min-w-sm sm:max-w-xl'>
         { yesPressed ? 
         (<>
           <img src="https://gifdb.com/images/high/milk-bear-love-mocha-cute-hug-o4qy1xq5p6myps41.gif" alt="" />
-          <h1 className='text-4xl text-center font-sans mx-auto text-red-500'>Yayyyyyyyyyyyyyyyyyyyyyyyyyyy !!!!</h1>
+          <h1 className='text-xl sm:text-4xl text-center font-sans mx-auto text-red-500'>Yayyyyyyyyyyyyyyyyyyyyyyyyyyy !!!!</h1>
         </>)
         :
         (<>
             <img className='h-[200px]' src="https://gifdb.com/images/high/bear-love-bouncing-mocha-with-flowers-n4m0fyne6h4e6y2x.gif" alt="" />
-            <h1 className='text-4xl text-center font-sans mx-auto my-10'>Will you be my Valentine !</h1>
+            <h1 className='text-4xl text-center font-sans mx-auto my-10'>Will you be my Valentine ?</h1>
             <div className='flex flex-row items-center justify-between space-x-5 mx-auto mt-10'>
                 <button 
                 onClick={handleYesClick}
